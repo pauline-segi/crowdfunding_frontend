@@ -1,5 +1,8 @@
 import { useParams } from "react-router-dom";
 import useProject from "../hooks/use-project";
+import CreatePledge from "../components/CreatePledge";
+
+import "./HomePage.css";
 
 
 
@@ -33,7 +36,7 @@ function ProjectPage() {
                         );
                     })}
                 </ul>
-                {/* <CreatePledge /> */}
+                <CreatePledge projectId={id}></CreatePledge>
             </div>
     );
 }
