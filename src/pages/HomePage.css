@@ -3,7 +3,7 @@
 :root {
     --teal: #025464;
     --dark-orange: #e57c23;
-    --light-orange: #e8aa42;
+    --light-orange: #eede7d;
     --grey: #f8f1f1;
 }
 
@@ -12,7 +12,7 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: var(--teal);
     scroll-behavior: smooth;
 }
@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body,
@@ -80,25 +80,30 @@ textarea {
 }
 
 
-/* Project List */
-
-#project-list {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    column-gap: 10px;
-    row-gap: 10px;
-    background-color: var(--grey);
+/* Container for the project list */
+#project-list-container {
+    margin: 20px;
+    padding: 20px;
+    padding-right: 20px;
+    background-color: var(--light-orange);
 }
 
 /* Project List - Mobile View */
-
-@media (max-width: 768px) {
-    #project-list {
-        display: grid;
-        grid-template-columns: 40%;
-        column-gap: 8px;
-        row-gap: 40px;
-        background-color: var(--grey);
-    }
+#project-list {
+    display: grid;
+    grid-template-columns: 50%;
+    padding: 20px;
+    column-gap: 20px;
+    row-gap: 40px;
 }
 
+/* Project List - Desktop View */
+@media (min-width: 768px) {
+    #project-list {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        padding: 20px;
+        column-gap: 20px;
+        row-gap: 40px;
+    }
+}
