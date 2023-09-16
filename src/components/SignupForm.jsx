@@ -29,6 +29,7 @@ function SignupForm() {
                 credentials.email
             )
                 .then((response) => {
+                    console.log("Signup successful. Response:", response);
                     window.localStorage.setItem("token", response.token);
                     navigate("/");
                 })
