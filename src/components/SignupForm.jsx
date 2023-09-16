@@ -39,7 +39,7 @@ function SignupForm() {
     };
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <div className="signup-link">
                 <label htmlFor="username">Username:</label>
                 <input
@@ -67,7 +67,7 @@ function SignupForm() {
                     onChange={handleChange}
                 />
             </div>
-            <button type="submit" onClick={handleSubmit}>
+            <button type="submit" onSubmit={handleSubmit}>
                 Get KnowMadding!
             </button>
         </form>
