@@ -28,9 +28,8 @@ function SignupForm() {
                 credentials.password,
                 credentials.email
             )
-                .then((response) => {
-                    console.log("Signup successful. Response:", response);
-                    window.localStorage.setItem("token", response.token);
+                .then((token) => {
+                    window.localStorage.setItem("token", token);
                     navigate("/");
                 })
                 .catch((error) => {
@@ -38,6 +37,7 @@ function SignupForm() {
                 });
         }
     };
+    
 
     return (
         <form onSubmit={handleSubmit}>
