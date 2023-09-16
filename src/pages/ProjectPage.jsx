@@ -3,6 +3,7 @@ import useProject from "../hooks/use-project";
 import CreatePledge from "../components/CreatePledge";
 
 import "./HomePage.css";
+import "../components/NavBar.css"
 
 
 

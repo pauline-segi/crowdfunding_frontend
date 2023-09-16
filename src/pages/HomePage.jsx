@@ -1,6 +1,7 @@
 import useProjects from "../hooks/use-projects";
 import ProjectCard from "../components/ProjectCard";
 
+import "../components/NavBar.css"
 import "./HomePage.css";
 
 function HomePage() {
