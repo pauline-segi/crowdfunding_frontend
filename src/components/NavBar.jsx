@@ -25,7 +25,7 @@ function NavBar() {
                 </Link>
                 <nav>
                     <Link to="/" className="home-link">Home</Link>
-                    <Link to="/signup" className="signup-link">Sign Up</Link>
+                    <Link to="/signup" className="signup-link">Join KnowMads</Link>
                     <Link to="/createproject" className="createproject-link">Create Project</Link>
 
                     {auth.token ? (

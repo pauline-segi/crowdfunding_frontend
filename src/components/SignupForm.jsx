@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-
 import postSignup from "../api/post-signup";
-
 
 function SignupForm() {
     const navigate = useNavigate();
@@ -24,16 +22,19 @@ function SignupForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (credentials.username &&credentials.email && credentials.password) {
+        if (credentials.username && credentials.email && credentials.password) {
             postSignup(
                 credentials.username,
-                credentials.email,
-                credentials.password
-            ).then((response) => {
-                // console.log("Response from postSignup:", response);
-                window.localStorage.setItem("token", response.token);
-                navigate("/");
-            });
+                credentials.password,
+                credentials.email
+            )
+                .then((response) => {
+                    window.localStorage.setItem("token", response.token);
+                    navigate("/");
+                })
+                .catch((error) => {
+                    console.error("Error during signup:", error);
+                });
         }
     };
 
@@ -41,34 +42,34 @@ function SignupForm() {
         <form>
             <div className="signup-link">
                 <label htmlFor="username">Username:</label>
-                <input 
-                type="text" 
-                name="username" 
-                placeholder="Enter username" 
-                onChange={handleChange}
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Enter username"
+                    onChange={handleChange}
                 />
             </div>
             <div>
                 <label htmlFor="email">Email:</label>
-                <input 
-                type="email" 
-                name="email" 
-                placeholder="Enter email" 
-                onChange={handleChange}
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter email"
+                    onChange={handleChange}
                 />
             </div>
             <div>
                 <label htmlFor="password">Password:</label>
-                <input 
-                type="password" 
-                name="password" 
-                placeholder="Password" 
-                onChange={handleChange}
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    onChange={handleChange}
                 />
             </div>
             <button type="submit" onClick={handleSubmit}>
-                Sign Up
-                </button>
+                Get KnowMadding!
+            </button>
         </form>
     );
 }
