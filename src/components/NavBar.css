@@ -4,28 +4,87 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 20px;
+    padding-right: 10px;
     padding-left: 10px;
 }
 
 .navbar-logo {
     width: 124px;
     height: auto;
-    background-color: var(--dark-orange);
     border: none;
     outline: none;
 }
 
+
 /* Nav link styles */
 .home-link,
-.login-link {
-    padding: 20px;
+.signup-link,
+.createproject-link,
+#login-link {
+    padding: 10px;
+    color: var(--light-orange);
+    text-decoration: none;
+    display: block;
+}
+
+/* Hover style */
+.home-link:hover,
+.signup-link:hover,
+.createproject-link:hover,
+#login-link:hover {
+    background-color: var(--teal);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+
+/* Updated styles for desktop view */
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.desktop-nav a {
+    margin-right: 20px;
+}
+
+
+
+/* Mobile View */
+.menu-icon {
+    order: 1;
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+    margin-right: 10px;
+    color: var(--light-orange)
+}
+
+/* Hide the navigation links by default in mobile view */
+#nav-bar.mobile-menu-open .navbar-logo-link,
+#nav-bar.mobile-menu-open nav {
+    display: block;
+}
+
+/* Updated styles for mobile view */
+.mobile-nav {
+    display: none;
+}
+
+.mobile-menu-open .mobile-nav {
+    display: block;
+    text-align: center;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 10px 0;
     color: var(--light-orange);
     text-decoration: none;
 }
 
-.home-link:hover,
-.login-link:hover {
+.mobile-nav a:hover {
     background-color: var(--teal);
     border-radius: 4px;
 }

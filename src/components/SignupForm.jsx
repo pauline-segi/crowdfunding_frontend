@@ -41,36 +41,38 @@ function SignupForm() {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div className="signup-link">
-                <label htmlFor="username">Username:</label>
-                <input
-                    type="text"
-                    name="username"
-                    placeholder="Enter username"
-                    onChange={handleChange}
-                />
+            <div className="signup">
+                <div>
+                    <label htmlFor="username">Username:</label>
+                    <input
+                        type="text"
+                        name="username"
+                        placeholder="Enter username"
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label htmlFor="email">Email:</label>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter email"
+                        onChange={handleChange}
+                        />
+                </div>
+                <div>
+                    <label htmlFor="password">Password:</label>
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        onChange={handleChange}
+                        />
+                </div>
+                <button type="submit" onSubmit={handleSubmit}>
+                    Get KnowMadding!
+                </button>
             </div>
-            <div>
-                <label htmlFor="email">Email:</label>
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Enter email"
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label htmlFor="password">Password:</label>
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    onChange={handleChange}
-                />
-            </div>
-            <button type="submit" onSubmit={handleSubmit}>
-                Get KnowMadding!
-            </button>
         </form>
     );
 }
