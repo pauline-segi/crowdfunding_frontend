@@ -1,6 +1,109 @@
+/* Base HTML Styles */
+
+:root {
+    --teal: #025464;
+    --dark-orange: #e57c23;
+    --light-orange: #eede7d;
+    --grey: #f8f1f1;
+}
+
+/* CSS Reset */
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--teal);
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Global styles */
+
+label,
+input,
+textarea,
+select {
+    display: block;
+    width: 100%;
+}
+
+input,
+select,
+textarea {
+    padding: 8px;
+}
+
+
+/* Container for the project list */
+#project-list-container {
+    margin: 20px;
+    padding: 20px;
+    padding-right: 20px;
+    background-color: var(--light-orange);
+}
+
+/* Project List - Mobile View */
 #project-list {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    column-gap: 10px;
-    row-gap: 10px;
+    grid-template-columns: 50%;
+    padding: 20px;
+    column-gap: 20px;
+    row-gap: 40px;
+}
+
+/* Project List - Desktop View */
+@media (min-width: 768px) {
+    #project-list {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        padding: 20px;
+        column-gap: 20px;
+        row-gap: 40px;
+    }
 }

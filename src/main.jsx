@@ -6,8 +6,14 @@ import HomePage from "./pages/HomePage.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import SignupPage from "./pages/SignupPage.jsx";
+<<<<<<< HEAD
+=======
+import CreateProjectPage from "./pages/CreateProjectPage.jsx";
+
+>>>>>>> 88b0d8ed1e13e7eeafbe395cdcf15f4562303457
 
 import NavBar from "./components/NavBar.jsx";
+import { AuthProvider } from "./components/AuthProvider.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,13 +24,17 @@ const router = createBrowserRouter([
       { path: "/login", element: <LoginPage />},
       { path: "/signup", element: <SignupPage />},
       { path: "/project/:id", element: <ProjectPage /> },
+      { path: "/users", element: <SignupPage /> },
+      { path: "/createproject", element: <CreateProjectPage /> },
+
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* Here we wrap our app in the router provider so they render */}
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
   );
