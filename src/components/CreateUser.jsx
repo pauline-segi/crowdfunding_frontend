@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import postSignup from "../api/post-signup";
+import postCreateUser from "../api/post-user";
 
-function SignupForm() {
+function CreateUser() {
     const navigate = useNavigate();
 
     const [credentials, setCredentials] = useState({
@@ -23,7 +23,7 @@ function SignupForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
         if (credentials.username && credentials.email && credentials.password) {
-            postSignup(
+            postCreateUser(
                 credentials.username,
                 credentials.password,
                 credentials.email
@@ -33,7 +33,7 @@ function SignupForm() {
                     navigate("/");
                 })
                 .catch((error) => {
-                    console.error("Error during signup:", error);
+                    console.error("Error creating your account:", error);
                 });
         }
     };
@@ -77,4 +77,4 @@ function SignupForm() {
     );
 }
 
-export default SignupForm;
+export default CreateUser;

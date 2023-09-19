@@ -1,5 +1,5 @@
-async function postSignup(username, password, email) {
-    const url = `${import.meta.env.VITE_API_URL}/users`;
+async function postCreateUser(username, password, email) {
+    const url = `${import.meta.env.VITE_API_URL}/signup`;
     const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -13,7 +13,7 @@ async function postSignup(username, password, email) {
     });
 
     if (!response.ok) {
-        const fallbackError = `Error trying to join KnowMads`;
+        const fallbackError = `Error trying to join create account`;
         const data = await response.json().catch(() => {
             throw new Error(fallbackError);
         });
@@ -31,4 +31,4 @@ async function postSignup(username, password, email) {
     }
 }
 
-export default postSignup;
+export default postCreateUser;

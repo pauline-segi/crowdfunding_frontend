@@ -7,6 +7,7 @@ import ProjectPage from "./pages/ProjectPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import SignupPage from "./pages/SignupPage.jsx";
 import CreateProjectPage from "./pages/CreateProjectPage.jsx";
+import UserPage from "./pages/UserPage.jsx"
 
 
 import NavBar from "./components/NavBar.jsx";
@@ -20,7 +21,8 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "/login", element: <LoginPage />},
       { path: "/project/:id", element: <ProjectPage /> },
-      { path: "/users", element: <SignupPage /> },
+      { path: "/signup", element: <SignupPage /> },
+      { path: "/users/:id", element: <UserPage /> },
       { path: "/createproject", element: <CreateProjectPage /> },
 
     ],
