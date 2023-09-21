@@ -1,6 +1,7 @@
 async function postSignup(username, password, email) {
     const url = `${import.meta.env.VITE_API_URL}/users`;
-    console.log("POST SIGNUP FUNCTION")
+    console.log("POST SIGNUP FUNCTION");
+    
     const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -21,7 +22,6 @@ async function postSignup(username, password, email) {
         const errorMessage = data?.detail ?? fallbackError;
         throw new Error(errorMessage);
     }
-
 
     const responseData = await response.json();
 
