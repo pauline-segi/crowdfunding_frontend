@@ -22,7 +22,9 @@ function SignupForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        console.log("HANDLE SUBMIT TRIGGERED")
         if (credentials.username && credentials.email && credentials.password) {
+            console.log("HELLO FROM HERE")
             postSignup(
                 credentials.username,
                 credentials.password,
