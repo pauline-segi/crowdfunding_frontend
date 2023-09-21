@@ -13,10 +13,10 @@ function SignupForm() {
     });
 
     const handleChange = (event) => {
-        const { name, value } = event.target;
+        const { id, value } = event.target;
         setCredentials((prevCredentials) => ({
             ...prevCredentials,
-            [name]: value,
+            [id]: value,
         }));
     };
 
