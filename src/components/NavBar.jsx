@@ -1,4 +1,4 @@
-// links: .navbar-logo-link, .home-link, .signup-link, .createproject-link, .login-link,
+// links: .navbar-logo-link, .home-link, .about-link, .projects-link, .profile-link, .signup-link, .createproject-link, .login-link,
 
 import React, { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
@@ -47,10 +47,16 @@ function NavBar() {
                         <Link to="/" className="home-link">
                             Home
                         </Link>
+                        <Link to="/about" className="about-link">
+                            About
+                        </Link>
                         <Link to="/users" className="signup-link">
                             Join KnowMads
                         </Link>
-                        <Link to="/createproject" className="createproject-link">
+                        <Link to="/users/:id" className="profile-link">
+                            My Profile
+                        </Link>
+                        <Link to="/projects" className="createproject-link">
                             Create Project
                         </Link>
                         {auth.token ? (
@@ -79,10 +85,16 @@ function NavBar() {
                         <Link to="/" className="home-link">
                             Home
                         </Link>
+                        <Link to="/about" className="about-link">
+                            About
+                        </Link>
                         <Link to="/users" className="signup-link">
                             Join KnowMads
                         </Link>
-                        <Link to="/createproject" className="createproject-link">
+                        <Link to="/users/:id" className="profile-link">
+                            My Profile
+                        </Link>
+                        <Link to="/projects" className="createproject-link">
                             Create Project
                         </Link>
                         {auth.token ? (

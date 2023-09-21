@@ -20,6 +20,10 @@
 .home-link,
 .signup-link,
 .createproject-link,
+.about-link, 
+.projects-link, 
+.profile-link,  
+.createproject-link,
 #login-link {
     padding: 10px;
     color: var(--light-orange);
@@ -30,6 +34,10 @@
 /* Hover style */
 .home-link:hover,
 .signup-link:hover,
+.createproject-link:hover,
+.about-link:hover, 
+.projects-link:hover, 
+.profile-link:hover,  
 .createproject-link:hover,
 #login-link:hover {
     background-color: var(--teal);
