@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 import useProfile from "../hooks/use-profile";
 
 import "./HomePage.css";
@@ -23,7 +23,7 @@ function ProfilePage() {
             <div>
                 <h2>{profile.name}</h2>
                 <h3>Email: {profile.email}</h3>
-                <h3>Username: {profile.email}</h3>
+                <h3>Username: {profile.username}</h3>
             </div>
     );
 }
