@@ -52,6 +52,7 @@ function SignupForm() {
                         name="username"
                         placeholder="Enter username"
                         onChange={handleChange}
+                        autoComplete="username"
                     />
                 </div>
                 <div>
@@ -62,6 +63,7 @@ function SignupForm() {
                         name="email"
                         placeholder="Enter email"
                         onChange={handleChange}
+                        autoComplete="email"
                         />
                 </div>
                 <div>
@@ -72,6 +74,7 @@ function SignupForm() {
                         name="password"
                         placeholder="Password"
                         onChange={handleChange}
+                        autoComplete="password"
                         />
                 </div>
                 <button type="submit" onSubmit={handleSubmit}>
