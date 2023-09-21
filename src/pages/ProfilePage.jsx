@@ -8,7 +8,7 @@ import "../components/NavBar.css"
 
 function ProfilePage() {
     const { id } = useParams();
-    const { project, isLoading, error } = useProfile(id);
+    const { profile, isLoading, error } = useProfile(id);
 
     if (isLoading) {
         return (<p>loading...</p>)
