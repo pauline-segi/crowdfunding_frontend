@@ -11,7 +11,7 @@ async function postProject(projectData) {
     })
 
     if (!response.ok) {
-        const fallbackError =`Error trying to login`;
+        const fallbackError =`Error trying to create project`;
         const data =await response.json().catch(() =>{
             throw new Error(fallbackError);
         });

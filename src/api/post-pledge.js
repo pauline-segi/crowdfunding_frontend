@@ -1,4 +1,4 @@
-async function postLogin(pledgeData) {
+async function postPledge(pledgeData) {
     const url =`${import.meta.env.VITE_API_URL}/pledges/`;
 
     const response = await fetch(url,{
@@ -11,7 +11,7 @@ async function postLogin(pledgeData) {
     })
 
     if (!response.ok) {
-        const fallbackError =`Error trying to login`;
+        const fallbackError =`Error trying to pledge`;
         const data =await response.json().catch(() =>{
             throw new Error(fallbackError);
         });
@@ -23,4 +23,4 @@ async function postLogin(pledgeData) {
     return await response.json();
 }
 
-export default postLogin;
+export default postPledge;

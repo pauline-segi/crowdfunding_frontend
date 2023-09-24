@@ -51,7 +51,7 @@ function NavBar() {
                         <Link to="/users" className="signup-link">
                             Join KnowMads
                         </Link>
-                        <Link to="/users/" className="profile-link">
+                        <Link to="/users" className="profile-link">
                             My Profile
                         </Link>
                         <Link to="/projects" className="createproject-link">
@@ -62,7 +62,7 @@ function NavBar() {
                                 Log Out
                             </Link>
                         ) : (
-                            <Link to="/login" id="login-link">
+                            <Link to="/users" id="login-link">
                                 Login
                             </Link> 
                         )}
@@ -86,7 +86,7 @@ function NavBar() {
                         <Link to="/users" className="signup-link">
                             Join KnowMads
                         </Link>
-                        <Link to="/users/" className="profile-link">
+                        <Link to="/users" className="profile-link">
                             My Profile
                         </Link>
                         <Link to="/projects" className="createproject-link">
@@ -97,7 +97,7 @@ function NavBar() {
                                 Log Out
                             </Link>
                         ) : (
-                            <Link to="/login" id="login-link">
+                            <Link to="/users" id="login-link">
                                 Login
                             </Link>
                         )}
