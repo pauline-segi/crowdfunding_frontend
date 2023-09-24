@@ -12,10 +12,8 @@ export default function useProject(projectId) {
         const url = `${import.meta.env.VITE_API_URL}/projects/${id}`;
         const response = await fetch(url, {
             method: "GET",
-          // Add appropriate headers and handle errors
         });
         if (!response.ok) {
-          // Handle error
         }
         return response.json();
     }

@@ -6,14 +6,14 @@ function CreateProject() {
     const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(false);
     const [projectData, setProjectData] = useState({
-        title: '',
-        description: '',
+        title: "",
+        description: "",
         goal: 0,
         image: null,
     });
 
     const handleChange = (e) => {
-        if (e.target.id === 'image') {
+        if (e.target.id === "image") {
             setProjectData({
                 ...projectData,
                 image: e.target.files[0], 
@@ -31,14 +31,14 @@ function CreateProject() {
         setIsLoading(true);
 
         const formData = new FormData();
-        formData.append('title', projectData.title);
-        formData.append('description', projectData.description);
-        formData.append('goal', projectData.goal);
-        formData.append('image', projectData.image);
+        formData.append("title", projectData.title);
+        formData.append("description", projectData.description);
+        formData.append("goal", projectData.goal);
+        formData.append("image", projectData.image);
 
         postProject(formData)
             .then(() => {
-                navigate('/'); 
+                navigate("/"); 
             })
             .catch(() => {
                 setIsLoading(false);
@@ -56,7 +56,7 @@ function CreateProject() {
                 <input 
                     type="text" 
                     id="title" 
-                    placeholder='Enter name for your KnowMad funding' 
+                    placeholder="Enter name for your KnowMad funding" 
                     onChange={handleChange} 
                 />
             </div>
@@ -65,7 +65,7 @@ function CreateProject() {
                 <input 
                     type="text" 
                     id="description" 
-                    placeholder='What do you want to achieve with your KnowMad funds?' 
+                    placeholder="What do you want to achieve with your KnowMad funds?"
                     onChange={handleChange} 
                 />
             </div>
@@ -74,7 +74,7 @@ function CreateProject() {
                 <input 
                     type="text" 
                     id="goal" 
-                    placeholder='How much do you need to make this happen?' 
+                    placeholder="How much do you need to make this happen?" 
                     onChange={handleChange} 
                 />
             </div>

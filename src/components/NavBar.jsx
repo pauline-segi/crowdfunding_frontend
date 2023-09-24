@@ -1,8 +1,8 @@
-// links: .navbar-logo-link, .home-link, .signup-link, .createproject-link, .login-link,
+// links: .navbar-logo-link, .home-link, .projects-link, .profile-link, .signup-link, .createproject-link, .login-link, .login-button,
 
 import React, { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { useAuth } from '../hooks/use-auth';
+import { useAuth } from '../hooks/use-auth.js';
 
 import './NavBar.css';
 import '../pages/HomePage.css';
@@ -11,11 +11,14 @@ import kmLogoVrt from '../img/km-logo-vrt.png';
 
 function NavBar() {
     const { auth, setAuth } = useAuth();
+    console.log("AUTH TOKEN in NavBar:", auth.token);
+
     const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768);
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleLogout = () => {
-        window.localStorage.removeItem('token');
+        window.localStorage.removeItem("token");
         setAuth({ token: null });
     };
 
@@ -28,10 +31,10 @@ function NavBar() {
             setIsMobileView(window.innerWidth < 768);
         };
 
-        window.addEventListener('resize', handleResize);
+        window.addEventListener("resize", handleResize);
 
         return () => {
-            window.removeEventListener('resize', handleResize);
+            window.removeEventListener("resize", handleResize);
         };
     }, []);
 
@@ -50,17 +53,20 @@ function NavBar() {
                         <Link to="/users" className="signup-link">
                             Join KnowMads
                         </Link>
-                        <Link to="/createproject" className="createproject-link">
+                        <Link to="/users" className="profile-link">
+                            My Profile
+                        </Link>
+                        <Link to="/projects" className="createproject-link">
                             Create Project
                         </Link>
                         {auth.token ? (
-                            <Link to="/" onClick={handleLogout}>
+                            <Link to="/" onClick={handleLogout} className="logout-button">
                                 Log Out
                             </Link>
-                        ) : (
+                            ) : (
                             <Link to="/login" id="login-link">
                                 Login
-                            </Link>
+                            </Link> 
                         )}
                     </nav>
                 </div>
@@ -68,7 +74,7 @@ function NavBar() {
 
             {/* Unicode character for the menu icon */}
             {isMobileView && (
-                <div id="nav-bar" className={isMenuOpen ? 'mobile-menu-open' : ''}>
+                <div id="nav-bar" className={isMenuOpen ? "mobile-menu-open" : ""}>
                     <div className="menu-icon" onClick={toggleMenu}>
                         &#9776;
                     </div>
@@ -82,14 +88,17 @@ function NavBar() {
                         <Link to="/users" className="signup-link">
                             Join KnowMads
                         </Link>
-                        <Link to="/createproject" className="createproject-link">
+                        <Link to="/users" className="profile-link">
+                            My Profile
+                        </Link>
+                        <Link to="/projects" className="createproject-link">
                             Create Project
                         </Link>
                         {auth.token ? (
-                            <Link to="/" onClick={handleLogout}>
+                            <Link to="/" onClick={handleLogout} className="logout-button">
                                 Log Out
                             </Link>
-                        ) : (
+                            ) : (
                             <Link to="/login" id="login-link">
                                 Login
                             </Link>

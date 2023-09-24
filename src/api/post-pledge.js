@@ -4,14 +4,14 @@ async function postLogin(pledgeData) {
     const response = await fetch(url,{
         method:"POST", 
         headers:{
-            'Content-Type':"application/json",
-            'Authorization': `Token ${window.localStorage.getItem('token')}`
+            "Content-Type":"application/json",
+            "Authorization": `Token ${window.localStorage.getItem("token")}`
         },
         body: JSON.stringify(pledgeData)
     })
 
     if (!response.ok) {
-        const fallbackError =`Error trying to login`;
+        const fallbackError =`Error trying to pledge`;
         const data =await response.json().catch(() =>{
             throw new Error(fallbackError);
         });
