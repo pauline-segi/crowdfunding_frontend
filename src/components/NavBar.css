@@ -28,7 +28,7 @@
 #login-link {
     padding: 10px;
     color: var(--light-orange);
-    background-color: var(--dark-orange);
+    background: var(--dark-orange);
     text-decoration: none;
     display: block;
 }
