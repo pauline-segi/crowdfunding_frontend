@@ -1,23 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import "./ProjectCard.css";
 
 
-function About() {
-    const [aboutData, setAboutData] = useState({});
+function AboutPage() {
+    const [aboutContent, setAboutContent] = useState({});
 
     useEffect(() => {
-        fetch('/api/about/')
+        fetch('/api/about/') 
             .then((response) => response.json())
-            .then((data) => setAboutData(data));
+            .then((data) => {
+                setAboutContent(data[0]);
+            })
+            .catch((error) => {
+                console.error('Error fetching About content:', error);
+            });
     }, []);
 
     return (
         <div>
-            <h1>About Know Mads</h1>
-            <p>{aboutData.content}</p>
+            <h1>{aboutContent.title}</h1>
+            <p>{aboutContent.content}</p>
         </div>
     );
 }
 
-export default About;
+export default AboutPage;
