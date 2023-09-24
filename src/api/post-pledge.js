@@ -1,4 +1,4 @@
-async function postPledge(pledgeData) {
+async function postLogin(pledgeData) {
     const url =`${import.meta.env.VITE_API_URL}/pledges/`;
 
     const response = await fetch(url,{
@@ -23,4 +23,4 @@ async function postPledge(pledgeData) {
     return await response.json();
 }
 
-export default postPledge;
+export default postLogin;

@@ -66,7 +66,7 @@ function SignupForm() {
                         placeholder="Enter email"
                         onChange={handleChange}
                         autoComplete="email"
-                        />
+                    />
                 </div>
                 <div>
                     <label htmlFor="password">Password:</label>
@@ -77,7 +77,7 @@ function SignupForm() {
                         placeholder="Password"
                         onChange={handleChange}
                         autoComplete="password"
-                        />
+                    />
                 </div>
                 <button type="submit" onSubmit={handleSubmit}>
                     Get KnowMadding!

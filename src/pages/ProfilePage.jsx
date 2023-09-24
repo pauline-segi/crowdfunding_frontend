@@ -21,11 +21,11 @@ function ProfilePage() {
 
 
     return (
-            <div>
-                <h2>{profile.name}</h2>
-                <h3>Email: {profile.email}</h3>
-                <h3>Username: {profile.username}</h3>
-            </div>
+        <div>
+            <h2>{profile.name}</h2>
+            <h3>Email: {profile.email}</h3>
+            <h3>Username: {profile.username}</h3>
+        </div>
     );
 }
 
