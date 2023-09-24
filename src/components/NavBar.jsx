@@ -1,4 +1,4 @@
-// links: .navbar-logo-link, .home-link, .about-link, .projects-link, .profile-link, .signup-link, .createproject-link, .login-link,
+// links: .navbar-logo-link, .home-link, .projects-link, .profile-link, .signup-link, .createproject-link, .login-link,
 
 import React, { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
@@ -47,9 +47,6 @@ function NavBar() {
                         <Link to="/" className="home-link">
                             Home
                         </Link>
-                        <Link to="/about" className="about-link">
-                            About
-                        </Link>
                         <Link to="/users" className="signup-link">
                             Join KnowMads
                         </Link>
@@ -84,9 +81,6 @@ function NavBar() {
                     <nav className="mobile-nav">
                         <Link to="/" className="home-link">
                             Home
-                        </Link>
-                        <Link to="/about" className="about-link">
-                            About
                         </Link>
                         <Link to="/users" className="signup-link">
                             Join KnowMads
