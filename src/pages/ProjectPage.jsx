@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import useProject from "../hooks/use-project";
+import useProject from "../hooks/use-project.js";
 import CreatePledge from "../components/CreatePledge";
 
 import "./HomePage.css";

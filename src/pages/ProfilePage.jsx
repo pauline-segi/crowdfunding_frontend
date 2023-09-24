@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import useProfile from "../hooks/use-profile";
+import useProfile from "../hooks/use-profile.js";
 
 import "./HomePage.css";
 import "../components/NavBar.css"

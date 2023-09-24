@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import useAuth from '../hooks/use-auth';
+import useAuth from '../hooks/use-auth.js';
 
 import './NavBar.css';
 import '../pages/HomePage.css';

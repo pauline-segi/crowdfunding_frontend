@@ -1,4 +1,4 @@
-import useProjects from "../hooks/use-projects";
+import useProjects from "../hooks/use-projects.js";
 import ProjectCard from "../components/ProjectCard";
 
 import "../components/NavBar.css"
