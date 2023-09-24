@@ -3,6 +3,7 @@ import useProfile from "../hooks/use-profile";
 
 import "./HomePage.css";
 import "../components/NavBar.css"
+import "../components/ProfileCard"
 
 
 

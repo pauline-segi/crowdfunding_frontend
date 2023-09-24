@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import "./ProjectCard.css";
 
 
 function ProfileCard(props) {
@@ -9,7 +8,7 @@ function ProfileCard(props) {
     return (
         <div>
             <Link to={profileLink}>
-                <img src={profileData.image} />
+                {/* <img src={profileData.image} /> */}
                 <h3>{profileData.name}</h3>
                 <h3>{profileData.username}</h3>
                 <h3>{profileData.email}</h3>

@@ -3,7 +3,7 @@ async function getProfile(userId) {
     const response = await fetch(url, { method: "GET" });
     
     if (!response.ok) {
-        const fallbackError = `Error fetching project with id ${userId}`;
+        const fallbackError = `Error fetching profile with id ${userId}`;
         
         const data = await response.json().catch(() => {
             throw new Error(fallbackError);
