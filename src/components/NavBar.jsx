@@ -1,4 +1,4 @@
-// links: .navbar-logo-link, .home-link, .projects-link, .profile-link, .signup-link, .createproject-link, .login-link,
+// links: .navbar-logo-link, .home-link, .projects-link, .profile-link, .signup-link, .createproject-link, .login-link, .login-button,
 
 import React, { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
@@ -57,7 +57,7 @@ function NavBar() {
                             Create Project
                         </Link>
                         {auth.token ? (
-                            <Link to="/" onClick={handleLogout}>
+                            <Link to="/" onClick={handleLogout} className="login-button">
                                 Log Out
                             </Link>
                         ) : (
@@ -92,7 +92,7 @@ function NavBar() {
                             Create Project
                         </Link>
                         {auth.token ? (
-                            <Link to="/" onClick={handleLogout}>
+                            <Link to="/" onClick={handleLogout} className="login-button">
                                 Log Out
                             </Link>
                         ) : (
