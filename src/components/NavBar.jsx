@@ -69,7 +69,6 @@ function NavBar() {
                             </Link> 
                         )}
                     </nav>
-                    <Outlet />
                 </div>
             )}
 
@@ -105,7 +104,6 @@ function NavBar() {
                             </Link>
                         )}
                     </nav>
-                    <Outlet />
                 </div>
             )}
 
