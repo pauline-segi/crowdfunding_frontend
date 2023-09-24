@@ -11,7 +11,7 @@ import ProfilePage from "./pages/ProfilePage.jsx";
 
 
 import NavBar from "./components/NavBar.jsx";
-import AuthProvider from "./components/AuthProvider.jsx";
+import { AuthProvider } from "./components/AuthProvider.jsx";
 
 const router = createBrowserRouter([
   {
