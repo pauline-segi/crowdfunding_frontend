@@ -11,7 +11,7 @@ import ProfilePage from "./pages/ProfilePage.jsx";
 
 
 import NavBar from "./components/NavBar.jsx";
-import { AuthProvider } from "./components/AuthProvider.jsx";
+import AuthProvider from "./components/AuthProvider.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "/projects", element: <CreateProjectPage /> },
       { path: "/project/:id", element: <ProjectPage /> },
-      { path: "/users", element: <LoginPage />},
+      { path: "/login", element: <LoginPage />},
       { path: "/users", element: <SignupPage /> },
       { path: "/users", element: <ProfilePage /> },
     ],

@@ -1,5 +1,5 @@
 import CreateProject from "../components/CreateProject";
-import { useAuth } from '../hooks/use-auth';
+import useAuth from '../hooks/use-auth';
 
 import "./HomePage.css";
 import "../components/NavBar.css";

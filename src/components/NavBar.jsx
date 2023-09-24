@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { useAuth } from '../hooks/use-auth';
+import useAuth from '../hooks/use-auth';
 
 import './NavBar.css';
 import '../pages/HomePage.css';
@@ -12,7 +12,9 @@ import kmLogoVrt from '../img/km-logo-vrt.png';
 function NavBar() {
     const { auth, setAuth } = useAuth();
     console.log("AUTH TOKEN in NavBar:", auth.token);
+
     const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768);
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleLogout = () => {
@@ -61,8 +63,8 @@ function NavBar() {
                             <Link to="/" onClick={handleLogout} className="logout-button">
                                 Log Out
                             </Link>
-                        ) : (
-                            <Link to="/users" id="login-link">
+                            ) : (
+                            <Link to="/login" id="login-link">
                                 Login
                             </Link> 
                         )}
@@ -96,8 +98,8 @@ function NavBar() {
                             <Link to="/" onClick={handleLogout} className="logout-button">
                                 Log Out
                             </Link>
-                        ) : (
-                            <Link to="/users" id="login-link">
+                            ) : (
+                            <Link to="/login" id="login-link">
                                 Login
                             </Link>
                         )}

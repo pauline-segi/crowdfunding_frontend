@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import postLogin from "../api/post-login";
-import { useAuth } from "../hooks/use-auth";
+import useAuth from "../hooks/use-auth";
 
 
 function LoginForm() {
