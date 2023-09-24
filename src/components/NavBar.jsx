@@ -15,7 +15,7 @@ function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleLogout = () => {
-        window.localStorage.removeItem('token');
+        window.localStorage.removeItem("token");
         setAuth({ token: null });
     };
 
@@ -28,10 +28,10 @@ function NavBar() {
             setIsMobileView(window.innerWidth < 768);
         };
 
-        window.addEventListener('resize', handleResize);
+        window.addEventListener("resize", handleResize);
 
         return () => {
-            window.removeEventListener('resize', handleResize);
+            window.removeEventListener("resize", handleResize);
         };
     }, []);
 
@@ -71,7 +71,7 @@ function NavBar() {
 
             {/* Unicode character for the menu icon */}
             {isMobileView && (
-                <div id="nav-bar" className={isMenuOpen ? 'mobile-menu-open' : ''}>
+                <div id="nav-bar" className={isMenuOpen ? "mobile-menu-open" : ""}>
                     <div className="menu-icon" onClick={toggleMenu}>
                         &#9776;
                     </div>

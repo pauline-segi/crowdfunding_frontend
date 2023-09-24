@@ -4,8 +4,8 @@ async function postLogin(pledgeData) {
     const response = await fetch(url,{
         method:"POST", 
         headers:{
-            'Content-Type':"application/json",
-            'Authorization': `Token ${window.localStorage.getItem('token')}`
+            "Content-Type":"application/json",
+            "Authorization": `Token ${window.localStorage.getItem("token")}`
         },
         body: JSON.stringify(pledgeData)
     })

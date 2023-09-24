@@ -8,7 +8,7 @@ function CreatePledge(props) {
     const [pledgeData, setPledgeData] = useState({
     project: props.projectId,
     amount: 0,
-    comment: '',
+    comment: "",
     anonymous: false
     })
 
@@ -50,7 +50,7 @@ function CreatePledge(props) {
         <input 
             type="text" 
             id="amount" 
-            placeholder='Enter the amount' 
+            placeholder="Enter the amount"
             onChange={handleChange} 
         />
     </div>
@@ -59,15 +59,15 @@ function CreatePledge(props) {
         <input 
             type="text" 
             id="comment" 
-            placeholder='Enter a comment' 
+            placeholder="Enter a comment"
             onChange={handleChange} 
         />
     </div>
     <div>
-        <label htmlFor='anonymous'>Anonymous Pledge</label>
+        <label htmlFor="anonymous">Anonymous Pledge</label>
         <input
-            type='checkbox'
-            id='anonymous'
+            type="checkbox"
+            id="anonymous"
             onChange={handleChecked}
         />
     </div>
