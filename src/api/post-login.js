@@ -5,6 +5,7 @@ async function postLogin(username, password) {
         // We need to tell the server that we are sending JSON dataso we set the Content-Type header to application/json
         headers: {
             "Content-Type": "application/json",
+            "Authorization": `Token ${window.localStorage.getItem("token")}`
         },
         body: JSON.stringify({
             "username": username,

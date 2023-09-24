@@ -1,11 +1,12 @@
 async function postSignup(username, password, email) {
-    const url = `${import.meta.env.VITE_API_URL}/users`;
+    const url = `${import.meta.env.VITE_API_URL}/users/`;
     console.log("POST SIGNUP FUNCTION");
     
     const response = await fetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
+            "Authorization": `Token ${window.localStorage.getItem("token")}`
         },
         body: JSON.stringify({
             username: username,
