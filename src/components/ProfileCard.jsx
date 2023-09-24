@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 
+
 function ProfileCard(props) {
     const { profileData } = props;
     const profileLink = `users/${profileData.id}`;

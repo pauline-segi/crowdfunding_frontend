@@ -11,6 +11,7 @@ import kmLogoVrt from '../img/km-logo-vrt.png';
 
 function NavBar() {
     const { auth, setAuth } = useAuth();
+    console.log("AUTH TOKEN in NavBar:", auth.token);
     const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 

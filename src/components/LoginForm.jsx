@@ -29,10 +29,12 @@ function LoginForm() {
                 credentials.username,
                 credentials.password
             ).then((response) => {
+                console.log("Check token before setting:", auth.token);
                 window.localStorage.setItem("token", response.token);
                 setAuth({
                     token: response.token,
                 });
+                console.log("CHECK TOKEN after setting:", auth.token);
                 navigate("/");
             });
         }
