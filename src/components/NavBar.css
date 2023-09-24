@@ -24,9 +24,11 @@
 .profile-link,  
 .createproject-link,
 .logout-button,
+.login-button,
 #login-link {
     padding: 10px;
     color: var(--light-orange);
+    background-color: var(--dark-orange);
     text-decoration: none;
     display: block;
 }
