@@ -57,7 +57,7 @@ function NavBar() {
                             Create Project
                         </Link>
                         {auth.token ? (
-                            <Link to="/" onClick={handleLogout} className="login-button">
+                            <Link to="/" onClick={handleLogout} className="logout-button">
                                 Log Out
                             </Link>
                         ) : (
@@ -92,7 +92,7 @@ function NavBar() {
                             Create Project
                         </Link>
                         {auth.token ? (
-                            <Link to="/" onClick={handleLogout} className="login-button">
+                            <Link to="/" onClick={handleLogout} className="logout-button">
                                 Log Out
                             </Link>
                         ) : (

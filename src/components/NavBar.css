@@ -23,7 +23,7 @@
 .projects-link, 
 .profile-link,  
 .createproject-link,
-.login-button,
+.logout-button,
 #login-link {
     padding: 10px;
     color: var(--light-orange);
@@ -38,7 +38,7 @@
 .projects-link:hover, 
 .profile-link:hover,  
 .createproject-link:hover,
-.login-button:hover,
+.logout-button:hover,
 #login-link:hover {
     background-color: var(--teal);
     border-radius: 4px;
