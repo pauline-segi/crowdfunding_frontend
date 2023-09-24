@@ -63,7 +63,7 @@ function NavBar() {
                         ) : (
                             <Link to="/login" id="login-link">
                                 Login
-                            </Link>
+                            </Link> 
                         )}
                     </nav>
                 </div>
